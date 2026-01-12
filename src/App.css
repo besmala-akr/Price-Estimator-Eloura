@@ -8,13 +8,12 @@
 
 * {
   box-sizing: border-box;
-  font-family: "Arima Madurai", cursive;
+  font-family: "Arima Madurai", cursive !important;
 }
 
 body {
   margin: 0;
-  background: var(--yellow);
-}
+  background: linear-gradient(135deg, var(--yellow), var(--soft-bg));
 
 /* ===== MAIN LAYOUT ===== */
 .container {
@@ -179,4 +178,5 @@ input:active {
   .title {
     font-size: 24px;
   }
+}
 }
