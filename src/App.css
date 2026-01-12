@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@400;600;700&display=swap");
+
 :root {
   --brown: #5b2d29;
   --yellow: #fff4b9;
@@ -6,186 +8,175 @@
 
 * {
   box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
+  font-family: "Arima Madurai", cursive;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Arima Madurai', cursive;
-  background: linear-gradient(135deg, var(--yellow), var(--soft-bg));
-  color: var(--brown);
-  min-height: 100vh;
-}
-
-/* FORCE FONT EVERYWHERE (CRITICAL FOR MOBILE) */
-input,
-button,
-textarea {
-  font-family: 'Arima Madurai', cursive !important;
-}
-
-/* LAYOUT */
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 18px;
+  margin: 0;
+  background: var(--yellow);
 }
 
+/* ===== MAIN LAYOUT ===== */
 .container {
-  width: 100%;
-  max-width: 390px;
-  background: rgba(255,255,255,0.96);
-  border-radius: 28px;
-  padding: 28px 22px 30px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
 }
 
-/* TEXT */
-.brand {
+/* ===== CARD ===== */
+.container {
+  background: var(--soft-bg);
+  max-width: 420px;
+  width: 100%;
+  padding: 28px 22px;
+  border-radius: 30px;
   text-align: center;
-  font-size: 26px;
-  font-weight: 700;
-  letter-spacing: 1px;
+}
+
+/* ===== TEXT ===== */
+.brand {
+  font-size: 22px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: var(--brown);
 }
 
 .welcome {
-  text-align: center;
   margin-top: 6px;
+  color: var(--brown);
   font-size: 14px;
-  opacity: 0.8;
 }
 
 .title {
-  text-align: center;
-  margin: 26px 0 6px;
-  font-size: 30px;
-  font-weight: 700;
+  margin-top: 18px;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--brown);
 }
 
 .subtitle {
-  text-align: center;
-  font-size: 13px;
-  opacity: 0.75;
-  margin-bottom: 26px;
+  font-size: 14px;
+  color: #7a5a55;
+  margin-top: 6px;
 }
 
-/* INPUT CARD */
+/* ===== INPUT CARD ===== */
 .input-card {
-  background: #ffffff;
+  margin-top: 22px;
+  border: 1px solid #e6dccf;
   border-radius: 22px;
-  padding: 20px;
-  box-shadow: inset 0 0 0 1px #eee;
+  padding: 18px;
 }
 
-label {
-  display: block;
+.input-card label {
   font-size: 12px;
   letter-spacing: 1px;
-  opacity: 0.7;
-  margin-bottom: 8px;
+  color: #7a5a55;
 }
 
+/* INPUT ROW */
 .input-wrapper {
   display: flex;
   align-items: center;
-  font-size: 22px;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 10px;
+  margin-top: 12px;
+  border-bottom: 1px solid #e0d6c9;
+  padding-bottom: 6px;
 }
 
 .currency {
-  font-weight: 700;
-  margin-right: 8px;
+  font-size: 22px;
+  color: var(--brown);
+  margin-right: 6px;
 }
 
-/* INPUT FIXES (MOST IMPORTANT PART) */
+/* INPUT FIELD (MOBILE SAFE) */
 input {
+  width: 100%;
   border: none;
   outline: none;
-  width: 100%;
-  font-size: 20px;
-  color: var(--brown);
+  font-size: 22px;
   background: transparent;
-  appearance: none;
-  -webkit-appearance: none;
+  color: var(--brown);
+}
+
+/* Fix mobile black background / autofill */
+input,
+input:focus,
+input:active {
+  background-color: transparent !important;
   -webkit-text-fill-color: var(--brown);
 }
 
-/* RESULT BOX */
+/* ===== HINT MESSAGE ===== */
+.hint {
+  margin-top: 14px;
+  background: var(--yellow);
+  padding: 12px;
+  border-radius: 14px;
+  font-size: 13px;
+  color: var(--brown);
+  border-left: 4px solid var(--brown);
+}
+
+/* ===== RESULT BOX ===== */
 .result {
-  margin-top: 22px;
-  text-align: center;
+  margin-top: 20px;
+  background: var(--yellow);
+  padding: 16px;
+  border-radius: 20px;
+  border: 2px dashed var(--brown);
+  color: var(--brown);
 }
 
 .result small {
-  font-size: 13px;
-  opacity: 0.7;
+  display: block;
+  font-size: 12px;
+  opacity: 0.8;
 }
 
 .final-price {
-  margin-top: 8px;
-  font-size: 30px;
+  font-size: 22px;
   font-weight: 700;
-  background: var(--yellow);
-  padding: 14px;
-  border-radius: 18px;
+  margin-top: 6px;
 }
 
-/* INSTAGRAM BUTTON */
+/* ===== INSTAGRAM BUTTON ===== */
 .instagram-btn {
-  margin-top: 24px;
   display: block;
-  text-align: center;
-  padding: 16px;
-  border-radius: 18px;
-  font-size: 16px;
-  font-weight: 700;
+  margin-top: 22px;
+  padding: 14px;
+  border-radius: 24px;
   text-decoration: none;
-  border: 2px solid var(--brown);
+  font-weight: 600;
   color: var(--brown);
   background: var(--yellow);
-  transition: all 0.25s ease;
+  border: 2px solid var(--brown);
+  transition: all 0.3s ease;
 }
 
+.instagram-btn:hover,
 .instagram-btn:active {
   background: var(--brown);
   color: var(--yellow);
 }
-.instagram-btn:hover {
-  background: var(--brown);
-  color: var(--yellow);
-}
-/* FOOTER */
+
+/* ===== FOOTER ===== */
 .footer-note {
-  margin-top: 22px;
-  text-align: center;
-  font-size: 11px;
-  opacity: 0.6;
+  margin-top: 18px;
+  font-size: 12px;
+  color: #9b7d77;
 }
 
-
-
-/* Pop animation for final price */
-@keyframes pop {
-  0% { transform: scale(0.5); opacity: 0; }
-  70% { transform: scale(1.05); opacity: 1; }
-  100% { transform: scale(1); }
-}
-
-/* Responsive adjustments */
+/* ===== MOBILE PERFECT ===== */
 @media (max-width: 480px) {
   .container {
-    padding: 20px 16px 24px;
+    padding: 24px 18px;
   }
 
   .title {
-    font-size: 26px;
-  }
-
-  .final-price {
-    font-size: 26px;
-    padding: 12px;
+    font-size: 24px;
   }
 }
