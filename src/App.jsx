@@ -7,11 +7,11 @@ export default function App() {
 
   const EURO_RATE = 290;
 
-  const getProfitRate = (euro) => {
-    if (euro <= 10) return 0.15;
-    if (euro >= 16) return 0.10;
-    return 0.13;
-  };
+  // const getProfitRate = (euro) => {
+  //   if (euro <= 10) return 0.15;
+  //   if (euro >= 16) return 0.10;
+  //   return 0.13;
+  // };
 
   // Automatically calculate whenever the user types
   const handleChange = (e) => {
@@ -25,8 +25,8 @@ export default function App() {
     }
 
     const base = euroValue * EURO_RATE;
-    const profitRate = getProfitRate(euroValue);
-    const final = Math.ceil((base + base * profitRate) / 5) * 5; // round up to 5
+    const profitRate = 1 * EURO_RATE;// fixed 1 euro profit
+    const final = Math.ceil((base + profitRate) / 5) * 5; // round up to 5
     setFinalPrice(final);
   };
 
